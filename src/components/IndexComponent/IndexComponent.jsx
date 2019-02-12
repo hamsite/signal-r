@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Button from 'react-bootstrap/Button';
+import {Form, Container, Row, Col} from 'react-bootstrap';
 
-export default class IndexComponent extends Component {
+class IndexComponent extends Component {
 
 constructor(props)
 {
@@ -30,7 +29,7 @@ InitializeConnection = () =>
 {
   const signalR = require("@aspnet/signalr");
   var connection = new signalR.HubConnectionBuilder()
- .withUrl("https://localhost:44352/SignalUSB")
+ .withUrl("https://localhost:5001/SignalUSB")
  .configureLogging(signalR.LogLevel.Information)
  .build();
 
@@ -66,16 +65,51 @@ GetSwitchStatus = () =>
   });
 }
 
+Checked =() =>{
+  console.log("test");
+}
+
     render() {
         return (
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-                <Button variant="" href="https://reactjs.org">Learn React</Button>
-            </p>         
-        </header>
+
+       <Container fluid="true" >
+       <Row className="justify-content-md-center white">
+
+    <Form.Group as={Row}>
+      <Form.Label as="legend" column sm={5}>
+        Radios
+      </Form.Label>
+      <Col sm={10}>
+        <Form.Check
+          type="radio"
+          label="first radio"
+          name="formHorizontalRadios"
+          id="formHorizontalRadios1"
+        />
+        <Form.Check
+          type="radio"
+          label="second radio"
+          name="formHorizontalRadios"
+          id="formHorizontalRadios2"
+        />
+        <Form.Check
+          type="radio"
+          label="third radio"
+          name="formHorizontalRadios"
+          id="formHorizontalRadios3"
+        />
+      </Col>
+    </Form.Group>
+   
+      </Row>
+
+         </Container>
+ 
         );
     }
 }
+
+export default IndexComponent;
+
 
 

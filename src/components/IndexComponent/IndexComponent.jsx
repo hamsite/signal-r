@@ -72,39 +72,109 @@ Checked =() =>{
     render() {
         return (
 
-       <Container fluid="true" >
-       <Row className="justify-content-md-center white">
+       <Container fluid="true" className="white">
 
-    <Form.Group as={Row}>
-      <Form.Label as="legend" column sm={5}>
-        Radios
-      </Form.Label>
-      <Col sm={10}>
-        <Form.Check
-          type="radio"
-          label="first radio"
-          name="formHorizontalRadios"
-          id="formHorizontalRadios1"
-        />
-        <Form.Check
-          type="radio"
-          label="second radio"
-          name="formHorizontalRadios"
-          id="formHorizontalRadios2"
-        />
-        <Form.Check
-          type="radio"
-          label="third radio"
-          name="formHorizontalRadios"
-          id="formHorizontalRadios3"
-        />
-      </Col>
-    </Form.Group>
-   
-      </Row>
+         <Row>
+            <Col sm={4}>
+                   <Form.Group as={Col}>
+                    <Form.Label as="legend" column sm={12}>
+                     Dining Room Lights
+                     <div className="text-primary">
+                        ON
+                    </div>
+                    </Form.Label>
 
-         </Container>
- 
+
+                    <Col sm={8}>
+                      <Form.Check
+                        type="radio"
+                        label="first radio"
+                        name="formHorizontalRadios"
+                        id="formHorizontalRadios1"
+                      />
+                      <Form.Check
+                        type="radio"
+                        label="second radio"
+                        name="formHorizontalRadios"
+                        id="formHorizontalRadios2"
+                      />
+                      <Form.Check
+                        type="radio"
+                        label="third radio"
+                        name="formHorizontalRadios"
+                        id="formHorizontalRadios3"
+                      />
+                    </Col>
+                  </Form.Group>
+            </Col>
+
+            <Col sm={4}>
+                 <Form.Group as={Col}>
+                    <Form.Label as="legend" column sm={12}>
+                    Bed Room Lights
+                    <div className="text-primary">
+                        ON
+                    </div>
+                    </Form.Label>
+                    <Col sm={8}>
+                      <Form.Check
+                        type="radio"
+                        label="first radio"
+                        name="formHorizontalRadios2"
+                        id="formHorizontalRadios1"
+                      />
+                      <Form.Check
+                        type="radio"
+                        label="second radio"
+                        name="formHorizontalRadios2"
+                        id="formHorizontalRadios2"
+                      />
+                      <Form.Check
+                        type="radio"
+                        label="third radio"
+                        name="formHorizontalRadios2"
+                        id="formHorizontalRadios3"
+                      />
+                    </Col>
+                  </Form.Group>
+            </Col>
+
+            <Col sm={4}>
+                  <Form.Group as={Col}>
+                    <Form.Label as="legend" column sm={12}>
+                       Bathroom Lights
+                       <div className="text-primary">
+                        ON
+                       </div>
+                    </Form.Label>
+
+                    <Col sm={8}>
+                      <Form.Check
+                        type="radio"
+                        label="first radio"
+                        name="formHorizontalRadios3"
+                        id="formHorizontalRadios1"
+                      />
+                      <Form.Check
+                        type="radio"
+                        label="second radio"
+                        name="formHorizontalRadios3"
+                        id="formHorizontalRadios2"
+                      />
+                      <Form.Check
+                        type="radio"
+                        label="third radio"
+                        name="formHorizontalRadios3"
+                        id="formHorizontalRadios3"
+                      />
+                    </Col>
+                  </Form.Group>
+            </Col>
+
+         </Row>
+
+       </Container>
+  
         );
     }
 }
